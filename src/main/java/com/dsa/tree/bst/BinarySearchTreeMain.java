@@ -65,6 +65,10 @@ public class BinarySearchTreeMain {
 		
 		//Finding maximum in the BST
 		System.out.println(tree != null && tree.getMaximum()!= null ? "Maximum value in the tree : "  + tree.getMaximum().getData() : "Empty tree");
+		
+		
+		//Get Height of the Binary Search Tree
+		System.out.println("Height of the Binary Search Tree : " + tree.getHeight());
 	}
 
 }

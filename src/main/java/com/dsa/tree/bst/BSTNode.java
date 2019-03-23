@@ -12,6 +12,9 @@ public class BSTNode {
 	private int data;
 	private BSTNode leftChild;
 	private BSTNode rightChild;
+	
+	public static int heightL = 0;
+	public static int heightR = 0;
 
 	public BSTNode(int data) {
 		this.data = data;
@@ -127,6 +130,37 @@ public class BSTNode {
 			return rightChild.getMaximum();		
 		}
 		return null;
+	}
+
+	/**
+	 * Get the height of the Binary Search Tree for Left
+	 * @return
+	 */
+	public int getHeightL() {
+		if(leftChild == null) {
+			return heightL;
+		}
+		if(leftChild != null) {
+			heightL++;
+			return leftChild.getHeightL();
+		}
+		return 0;
+	}
+	
+	
+	/**
+	 * Get the height of the Binary Search Tree for Right Child
+	 * @return
+	 */
+	public int getHeightR() {
+		if(rightChild == null) {
+			return heightR;
+		}
+		if(rightChild != null) {
+			heightR++;
+			return rightChild.getHeightR();
+		}
+		return 0;
 	}
 
 	/**

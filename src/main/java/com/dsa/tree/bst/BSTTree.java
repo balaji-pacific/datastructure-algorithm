@@ -85,4 +85,14 @@ public class BSTTree {
 		}
 		return null;
 	}	
+	
+	/**
+	 * Get the height of the Binary Search Tree
+	 * @return
+	 */
+	public int getHeight() {
+		int left = root.getHeightL();
+		int right = root.getHeightR();
+		return left > right ? left : right;
+	}
 }
