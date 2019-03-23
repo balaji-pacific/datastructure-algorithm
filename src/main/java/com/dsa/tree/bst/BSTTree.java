@@ -50,4 +50,39 @@ public class BSTTree {
 			root.traversePostOrder();
 		}
 	}
+	
+	/**
+	 * This method is to find the given value is available in the tree or not
+	 * @param value
+	 */
+	public Object getNode(int value) {
+		if(root != null) {
+			if(root.getNode(value) != null) {
+				return root.getNode(value).getData();			
+			}			
+		}
+		return null;		
+	}
+	
+	/**
+	 * Getting Minimum value in the Tree
+	 * @return
+	 */
+	public BSTNode getMinimum() {
+		if(root != null) {
+			return root.getMinimum();
+		}
+		return null;
+	}
+	
+	/**
+	 * Getting Maximum value in the Tree
+	 * @return
+	 */
+	public BSTNode getMaximum() {
+		if(root != null) {
+			return root.getMaximum();
+		}
+		return null;
+	}	
 }

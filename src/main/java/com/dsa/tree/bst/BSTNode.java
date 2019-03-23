@@ -80,6 +80,54 @@ public class BSTNode {
 		System.out.print(data + "  ");
 	}
 	
+	/**
+	 * This method is to find the given value is available in the tree or not
+	 * @param value
+	 * @return null if the value is not available otherwise data
+	 */
+	public BSTNode getNode(int value) {
+		if(value == data) {
+			return this;
+		}
+		if(value < data) {
+			if(leftChild != null) {
+				return leftChild.getNode(value);
+			}
+		}else {
+			if(rightChild != null) {
+				return rightChild.getNode(value);
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * Finding the minimum value in the Binary search tree
+	 * @return
+	 */
+	public BSTNode getMinimum() {		
+		if(leftChild == null) {
+			return this;
+		}
+		if(leftChild != null) {
+			return leftChild.getMinimum();		
+		}
+		return null;
+	}
+	
+	/**
+	 * Finding the maximum value in the Binary search tree
+	 * @return
+	 */
+	public BSTNode getMaximum() {
+		if(rightChild == null) {
+			return this;
+		}
+		if(rightChild != null) {
+			return rightChild.getMaximum();		
+		}
+		return null;
+	}
 
 	/**
 	 * @return the data
