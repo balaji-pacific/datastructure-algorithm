@@ -58,33 +58,37 @@ public class BSTUserInput {
 			int inputOption = Integer.parseInt(input.nextLine());			
 			switch(inputOption) {
 			case 1:
+				System.out.println("Enter the node value to insert into tree : ");
+				String value = input.nextLine();
+				bstTree.insert(Integer.parseInt(value.trim()));
+			case 2:
 				System.out.print("In Order Traversal : ");
 				bstTree.traverseInOrderNode();
 				System.out.println();
 				break;
-			case 2:
+			case 3:
 				System.out.print("Pre Order Traversal : ");
 				bstTree.traversePreOrderNode();
 				System.out.println();
 				break;
-			case 3:
+			case 4:
 				System.out.print("Post Order Traversal : ");
 				bstTree.traversePostOrderNode();
 				System.out.println();
 				break;
-			case 4:
+			case 5:
 				System.out.println(bstTree != null && bstTree.getMinimum()!=null ?  "Minimum value in the tree : " + bstTree.getMinimum().getData() : "Empty Tree");
 				System.out.println();
 				break;
-			case 5:				
+			case 6:				
 				System.out.println(bstTree != null && bstTree.getMaximum()!= null ? "Maximum value in the tree : "  + bstTree.getMaximum().getData() : "Empty tree");
 				System.out.println();
 				break;
-			case 6:
+			case 7:
 				System.out.println("Height of the Binary Search Tree : " + bstTree.getHeight());
 				System.out.println();
 				break;
-			case 7:
+			case 8:
 				System.out.println("Enter the node o search in the tree : ");
 				int searchNode = Integer.parseInt(input.nextLine());	
 				if(null!=bstTree.getNode(searchNode)) {
