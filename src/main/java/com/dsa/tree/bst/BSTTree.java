@@ -95,4 +95,37 @@ public class BSTTree {
 		int right = root.getHeightR();
 		return left > right ? left : right;
 	}
+	
+	/**
+	 * 
+	 * @param value
+	 */
+	public void delete(int value) {
+		root = delete(root, value);		
+	}
+	
+	/**
+	 * 
+	 * @param subTreeRoot
+	 * @param value
+	 * @return
+	 */
+	private BSTNode delete(BSTNode subTreeRoot, int value) {
+		if(subTreeRoot == null) {
+			return subTreeRoot;
+		}
+		
+		if(value < subTreeRoot.getData()) {
+			subTreeRoot.setLeftNode(delete(subTreeRoot.getLeftNode(), value));
+		}else if(value > subTreeRoot.getData()){
+			subTreeRoot.setRightNode(delete(subTreeRoot.getRightNode(), value));
+		}else if(value == subTreeRoot.getData()) {
+			if(subTreeRoot.getLeftNode() == null) {
+				return subTreeRoot.getRightNode();
+			}else if(subTreeRoot.getRightNode() == null) {
+				return subTreeRoot.getLeftNode();
+			}
+		}
+		return subTreeRoot;
+	}
 }

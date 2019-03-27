@@ -33,27 +33,41 @@ public class BSTUserInput {
 		System.out.println("--------------------------------Binary search Tree---------------------------------------");
 		System.out.println("-----------------------------------------------------------------------------------------");
 		
+		BSTTree bstTree = new BSTTree();
+		
 		input = new Scanner(System.in);
 		System.out.println("Enter the list of nodes(Integer) to insert into tree with comma seperated (eg: 1,2,3): ");
-		String treeNodes = input.nextLine();
-		String[] nodes = treeNodes.split(",");
-		BSTTree bstTree = new BSTTree();
-		for (String value : nodes) {
-			bstTree.insert(Integer.parseInt(value.trim()));
-		}
+		/*
+		 * String treeNodes = input.nextLine(); String[] nodes = treeNodes.split(",");
+		 * for (String value : nodes) { bstTree.insert(Integer.parseInt(value.trim()));
+		 * }
+		 */
+		
+		bstTree.insert(25);
+		bstTree.insert(20); 
+		bstTree.insert(15); 
+		bstTree.insert(27); 
+		bstTree.insert(30);
+		bstTree.insert(29);
+		bstTree.insert(26);
+		bstTree.insert(22);
+		bstTree.insert(32);
+		bstTree.insert(17);
 		
 		System.out.println("Nodes are inserted into the tree");		
 		System.out.println("-----------------------------------------------------------------------------------------");
 		
 		for(;;) {
-			System.out.println("1. In order Traversal");
-			System.out.println("2. Pre order Traversal");
-			System.out.println("3. Post order Traversal");
-			System.out.println("4. Find minimum value of tree");
-			System.out.println("5. Find maximum value of the tree");
-			System.out.println("6. Height of the tree");
-			System.out.println("7. Search Node in tree");
-			System.out.println("8. Exit");
+			System.out.println("1. Insert Node into Tree");
+			System.out.println("2. In order Traversal");
+			System.out.println("3. Pre order Traversal");
+			System.out.println("4. Post order Traversal");
+			System.out.println("5. Find minimum value of tree");
+			System.out.println("6. Find maximum value of the tree");
+			System.out.println("7. Height of the tree");
+			System.out.println("8. Search Node in tree");
+			System.out.println("9. Delete Node in tree");
+			System.out.println("Exit");
 			System.out.println("Enter your option : ");			
 			int inputOption = Integer.parseInt(input.nextLine());			
 			switch(inputOption) {
@@ -97,6 +111,12 @@ public class BSTUserInput {
 					System.out.println("Data " + searchNode + " is not available");
 				}
 				System.out.println();
+				break;
+			case 9:
+				System.out.println("Enter the node to be deleted");
+				int deleteNode = Integer.parseInt(input.nextLine());
+				bstTree.delete(deleteNode);
+				System.out.println("Node Deleted Successfully");
 				break;
 			default:
 				System.out.println("-----------------------------------------------------------------------------------------");
