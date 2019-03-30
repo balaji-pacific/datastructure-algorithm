@@ -43,16 +43,30 @@ public class BSTUserInput {
 		 * }
 		 */
 		
+		/*
+		 * bstTree.insert(25); bstTree.insert(20); bstTree.insert(15);
+		 * bstTree.insert(27); bstTree.insert(30); bstTree.insert(29);
+		 * bstTree.insert(26); bstTree.insert(22); bstTree.insert(32);
+		 * bstTree.insert(17);
+		 */
+		
+		
+		bstTree.insert(100);
+		bstTree.insert(58); 
+		bstTree.insert(30); 
+		bstTree.insert(47); 
 		bstTree.insert(25);
-		bstTree.insert(20); 
-		bstTree.insert(15); 
-		bstTree.insert(27); 
-		bstTree.insert(30);
-		bstTree.insert(29);
-		bstTree.insert(26);
-		bstTree.insert(22);
-		bstTree.insert(32);
-		bstTree.insert(17);
+		bstTree.insert(39);
+		bstTree.insert(125);
+		bstTree.insert(111);
+		bstTree.insert(137);
+		bstTree.insert(110);
+		bstTree.insert(120);
+		bstTree.insert(130);
+		bstTree.insert(140);
+		bstTree.insert(109);
+		bstTree.insert(121);
+		bstTree.insert(119);
 		
 		System.out.println("Nodes are inserted into the tree");		
 		System.out.println("-----------------------------------------------------------------------------------------");

@@ -125,7 +125,10 @@ public class BSTTree {
 			}else if(subTreeRoot.getRightNode() == null) {
 				return subTreeRoot.getLeftNode();
 			}
+			subTreeRoot.setData(subTreeRoot.getRightNode().getMinimum().getData());		
+			subTreeRoot.setRightNode(delete(subTreeRoot.getRightNode(), subTreeRoot.getData()));
 		}
+		
 		return subTreeRoot;
 	}
 }
