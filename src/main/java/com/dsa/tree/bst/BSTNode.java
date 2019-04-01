@@ -147,6 +147,28 @@ public class BSTNode {
 		return 0;
 	}
 	
+	/**
+	 * Find the path between root and node in BST
+	 * @param value
+	 */
+	public void getPath(int value) {
+		if(getNode(value) != null) {
+			if(value == data) {
+				System.out.print(data);
+			}else {
+				if(value < data) {
+					System.out.print(data + " -> ");
+					leftChild.getPath(value);
+				}else if(value > data){
+					System.out.print(data + " -> ");
+					rightChild.getPath(value);
+				}
+			}
+		}else {
+			System.out.println("Node is not available");
+		}
+	}
+	
 	
 	/**
 	 * Get the height of the Binary Search Tree for Right Child

@@ -128,7 +128,15 @@ public class BSTTree {
 			subTreeRoot.setData(subTreeRoot.getRightNode().getMinimum().getData());		
 			subTreeRoot.setRightNode(delete(subTreeRoot.getRightNode(), subTreeRoot.getData()));
 		}
-		
 		return subTreeRoot;
+	}
+	
+	/**
+	 * Get the path between root and node
+	 * @param value
+	 */
+	public void getPath(int value) {
+		System.out.print("The path between root and node is : ");
+		root.getPath(value);
 	}
 }

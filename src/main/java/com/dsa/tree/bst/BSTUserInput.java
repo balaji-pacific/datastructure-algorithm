@@ -37,12 +37,15 @@ public class BSTUserInput {
 		
 		input = new Scanner(System.in);
 		System.out.println("Enter the list of nodes(Integer) to insert into tree with comma seperated (eg: 1,2,3): ");
+		
+		//Code for getting user node as Input value
 		/*
 		 * String treeNodes = input.nextLine(); String[] nodes = treeNodes.split(",");
 		 * for (String value : nodes) { bstTree.insert(Integer.parseInt(value.trim()));
 		 * }
 		 */
 		
+				
 		/*
 		 * bstTree.insert(25); bstTree.insert(20); bstTree.insert(15);
 		 * bstTree.insert(27); bstTree.insert(30); bstTree.insert(29);
@@ -81,6 +84,7 @@ public class BSTUserInput {
 			System.out.println("7. Height of the tree");
 			System.out.println("8. Search Node in tree");
 			System.out.println("9. Delete Node in tree");
+			System.out.println("10. Find path between root and node");
 			System.out.println("Exit");
 			System.out.println("Enter your option : ");			
 			int inputOption = Integer.parseInt(input.nextLine());			
@@ -132,6 +136,11 @@ public class BSTUserInput {
 				bstTree.delete(deleteNode);
 				System.out.println("Node Deleted Successfully");
 				break;
+			case 10:
+				System.out.println("Enter the node to get the path : ");
+				int node = Integer.parseInt(input.nextLine());
+				bstTree.getPath(node);
+				System.out.println();
 			default:
 				System.out.println("-----------------------------------------------------------------------------------------");
 				System.out.println("\t\t\t\tThank you!");
