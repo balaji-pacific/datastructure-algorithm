@@ -9,24 +9,29 @@ package com.dsa.sort.algorithm;
  */
 public class SelectionSort {
 	
-	private static int[] arrayValue = {156, 2, -15, 23, 893, 55, 2, -10, -456};
+	private static int[] arrayValue = {3456, 156, 2, -15, 23, 893, 55, 2, -10, -456};
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
+		System.out.println("Selection Sort");
+		System.out.println("--------------");
+		
 		System.out.println("Before Sorting");		
 		for(int i=0;i<arrayValue.length;i++){
 			System.out.print(arrayValue[i] + " ");			
 		}
 		
-		for(int unSortedPartation = arrayValue.length-1; unSortedPartation>=0; unSortedPartation--) {
-			for(int i=0;i<unSortedPartation;i++) {
-				if(arrayValue[i]>arrayValue[i+1]) {
-					swap(i,i+1);
+		for(int unSortedPartation=arrayValue.length-1; unSortedPartation>0; unSortedPartation--){
+			int max = 0;
+			for(int i=1; i<=unSortedPartation; i++) {
+				if(arrayValue[i] > arrayValue[max]) {
+					max = i;
 				}
 			}
+			swap(max, unSortedPartation);
 		}
 		
 		System.out.println("\nAfter Sorting");		
