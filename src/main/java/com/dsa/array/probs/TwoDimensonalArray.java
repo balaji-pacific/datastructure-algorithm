@@ -11,6 +11,8 @@ import java.util.Scanner;
  */
 public class TwoDimensonalArray {
 
+	private static Scanner scanner;
+
 	/**
 	 * @param args
 	 */
@@ -20,7 +22,7 @@ public class TwoDimensonalArray {
 		int row = 0;
 		int column = 0;
 		
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		System.out.print("Enter size of the row : ");
 		row = scanner.nextInt();
 		System.out.print("Enter size of the column : ");
