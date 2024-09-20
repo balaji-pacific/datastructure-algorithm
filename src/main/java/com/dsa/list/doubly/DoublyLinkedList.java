@@ -64,5 +64,22 @@ public class DoublyLinkedList {
 	public boolean isEmpty() {
 		return (null == head && null == tail);
 	}
-
+	
+	/**
+	 * This method will print the node from Head
+	 */
+	public void fromHead() {
+		if(null == head) {
+			System.out.println("List is empty");
+			return;
+		}
+		EmployeeNode current = head;
+		System.out.print("Head -> ");
+		while(current != null) {
+			System.out.print(current.getNode());
+			System.out.print(" -> ");
+			current = current.getNextNode();
+		}
+		System.out.println(" <- Tail");
+	}
 }
